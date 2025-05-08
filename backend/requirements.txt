@@ -1,0 +1,19 @@
+# fastapi
+# uvicorn
+# pandas
+# openpyxl
+# requests
+# jinja2
+
+
+fastapi
+uvicorn
+pandas
+openpyxl
+langchain
+ollama
+google-generativeai
+jinja2
+python-multipart
+bcrypt
+psycopg2-binary

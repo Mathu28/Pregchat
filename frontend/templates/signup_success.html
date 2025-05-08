@@ -1,0 +1,113 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Signup Success - PregChat</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #FFC0CB;
+            text-align: center;
+            padding: 50px;
+        }
+        .box {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            display: inline-block;
+            box-shadow: 0 0 10px rgba(0,0,0,0.3);
+        }
+        h2 {
+            color: #c2185b;
+        }
+        p {
+            font-size: 18px;
+        }
+        a {
+            display: inline-block;
+            margin-top: 15px;
+            text-decoration: none;
+            color: white;
+            background-color: #d63384;
+            padding: 10px 20px;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h2>Signup Successful!</h2>
+        <p>{{ message }}</p>
+        <a href="/">Go to Login</a>
+    </div>
+</body>
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Signup Successful - PregChat</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff0f5;
+            text-align: center;
+            padding: 60px;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 0 12px rgba(0,0,0,0.2);
+        }
+
+        h2 {
+            color: #d63384;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .highlight {
+            font-size: 24px;
+            font-weight: bold;
+            color: #c2185b;
+            margin: 10px 0;
+        }
+
+        a.button {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #d63384;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+
+        a.button:hover {
+            background-color: #c2185b;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Signup Successful!</h2>
+        <p>Your account has been created successfully.</p>
+        <p>Your Patient ID is:</p>
+        <div class="highlight">{{ patient_id }}</div>
+        <p>Please remember this ID for future logins.</p>
+        <a class="button" href="/">Go to Login</a>
+    </div>
+</body>
+</html>

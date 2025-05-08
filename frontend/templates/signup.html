@@ -1,0 +1,294 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PregChat - Sign Up</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #FFC0CB;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .site-title {
+            font-size: 32px;
+            font-weight: bold;
+            color: #c2185b;
+            margin-bottom: 10px;
+        }
+
+        .logo {
+            width: 100px;
+            margin-bottom: 15px;
+        }
+
+        h2 {
+            color: #d63384;
+            margin-bottom: 20px;
+        }
+
+        form input, form select {
+            width: 90%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        button {
+            background-color: #d63384;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 6px;
+            font-size: 18px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #c2185b;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1 class="site-title">PregChat</h1>
+    <img class="logo" src="{{ url_for('static', path='pregchat_logo.png') }}" alt="PregChat Logo">
+    <h2>Sign Up</h2>
+
+    <form action="/signup" method="post">
+        <input type="text" name="name" placeholder="Name" required>
+        <input type="number" name="age" placeholder="Age" required>
+        <input type="number" name="pregnancies" placeholder="Pregnancies" required>
+        <input type="text" name="tt_vaccination" placeholder="TT Vaccination" required>
+        <input type="number" step="0.1" name="gestational_age" placeholder="Gestational Age" required>
+        <input type="text" name="gestational_age_units" placeholder="Gestational Age Units" required>
+        <input type="number" step="0.1" name="weight" placeholder="Weight" required>
+        <input type="text" name="weight_unit" placeholder="Weight Unit" required>
+        <input type="number" step="0.1" name="height" placeholder="Height" required>
+        <input type="text" name="height_unit" placeholder="Height Unit" required>
+        <input type="text" name="blood_pressure" placeholder="Blood Pressure" required>
+        <input type="text" name="anemia" placeholder="Anemia" required>
+        <input type="text" name="jaundice" placeholder="Jaundice" required>
+        <input type="text" name="fetal_position" placeholder="Fetal Position" required>
+        <input type="text" name="fetal_movement" placeholder="Fetal Movement" required>
+        <input type="text" name="fetal_heartbeat" placeholder="Fetal Heartbeat" required>
+        <input type="text" name="urine_test_albumin" placeholder="Urine Test Albumin" required>
+        <input type="text" name="urine_test_sugar" placeholder="Urine Test Sugar" required>
+        <input type="text" name="vdrl" placeholder="VDRL" required>
+        <input type="text" name="hrsag" placeholder="HRsAG" required>
+        <input type="text" name="high_risk_pregnancy" placeholder="High Risk Pregnancy" required>
+        <input type="password" name="password" placeholder="Password" required>
+        <input type="password" name="confirm_password" placeholder="Confirm Password" required>
+        <button type="submit">Register</button>
+    </form>
+</div>
+
+</body>
+</html> -->
+
+
+
+
+
+
+<!-- ############################################# -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PregChat - Signup</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff0f5;
+            padding: 30px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px #ccc;
+        }
+
+        h2 {
+            text-align: center;
+            color: #d63384;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            margin-top: 20px;
+            width: 100%;
+            padding: 12px;
+            background-color: #d63384;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #c2185b;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Patient Signup - PregChat</h2>
+
+        <form method="post" action="/signup">
+            <label>Name</label>
+            <input type="text" name="name" required>
+
+            <label>Age</label>
+            <input type="number" name="age" required>
+
+            <label>Pregnancies</label>
+            <select name="pregnancies" required>
+                <option value="">Select</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+            </select>
+
+            <label>TT Vaccination</label>
+            <select name="tt_vaccination" required>
+                <option value="">Select</option>
+                <option value="1">1 Dose</option>
+                <option value="2">2 Doses</option>
+            </select>
+
+            <label>Gestational Age (weeks)</label>
+            <input type="number" name="gestational_age" placeholder="e.g. 20" required>
+            <input type="hidden" name="gestational_age_units" value="weeks">
+
+            <label>Weight (kg)</label>
+            <input type="number" name="weight" step="0.1" placeholder="e.g. 60.5" required>
+            <input type="hidden" name="weight_unit" value="kg">
+
+            <label>Height (cm)</label>
+            <input type="number" name="height" placeholder="e.g. 160" required>
+            <input type="hidden" name="height_unit" value="cm">
+
+            <label>Blood Pressure</label>
+            <input type="text" name="blood_pressure" placeholder="e.g. 100/70" required>
+
+            <label>Anemia</label>
+            <select name="anemia" required>
+                <option value="">Select</option>
+                <option value="none">None</option>
+                <option value="minimal">Minimal</option>
+                <option value="medium">Medium</option>
+                <option value="higher">Higher</option>
+            </select>
+
+            <label>Jaundice</label>
+            <select name="jaundice" required>
+                <option value="">Select</option>
+                <option value="none">None</option>
+                <option value="minimal">Minimal</option>
+                <option value="medium">Medium</option>
+                <option value="higher">Higher</option>
+            </select>
+
+            <label>Fetal Position</label>
+            <select name="fetal_position" required>
+                <option value="">Select</option>
+                <option value="normal">Normal</option>
+                <option value="abnormal">Abnormal</option>
+            </select>
+
+            <label>Fetal Movement</label>
+            <select name="fetal_movement" required>
+                <option value="">Select</option>
+                <option value="normal">Normal</option>
+                <option value="abnormal">Abnormal</option>
+            </select>
+
+            <label>Fetal Heartbeat</label>
+            <input type="number" name="fetal_heartbeat" placeholder="e.g. 140" required>
+
+            <label>Urine Test Albumin</label>
+            <select name="urine_test_albumin" required>
+                <option value="">Select</option>
+                <option value="none">None</option>
+                <option value="minimal">Minimal</option>
+                <option value="medium">Medium</option>
+                <option value="higher">Higher</option>
+            </select>
+
+            <label>Urine Test Sugar</label>
+            <select name="urine_test_sugar" required>
+                <option value="">Select</option>
+                <option value="true">True</option>
+                <option value="false">False</option>
+            </select>
+
+            <label>VDRL</label>
+            <select name="vdrl" required>
+                <option value="">Select</option>
+                <option value="positive">Positive</option>
+                <option value="negative">Negative</option>
+            </select>
+
+            <label>HBsAg</label>
+            <select name="hrsag" required>
+                <option value="">Select</option>
+                <option value="positive">Positive</option>
+                <option value="negative">Negative</option>
+            </select>
+
+            <label>High-Risk Pregnancy</label>
+            <select name="high_risk_pregnancy" required>
+                <option value="">Select</option>
+                <option value="true">True</option>
+                <option value="false">False</option>
+            </select>
+
+            <label>Password</label>
+            <input type="password" name="password" required>
+
+            <label>Confirm Password</label>
+            <input type="password" name="confirm_password" required>
+
+            <button type="submit">Sign Up</button>
+        </form>
+    </div>
+</body> 
+</html>
